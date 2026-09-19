@@ -1,4 +1,4 @@
-package oop_01_ClementsDB.week01
+package week01
 
 fun main() {
     val gameTitle = "No Man's Sky"
