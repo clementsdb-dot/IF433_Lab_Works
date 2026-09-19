@@ -1,4 +1,4 @@
-package week01
+package oop_140826_ClementsDB.week01
 
 fun main() {
     val name = "John Thor"
