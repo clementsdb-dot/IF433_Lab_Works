@@ -9,5 +9,18 @@ fun main(){
     println("--- Pembayaran ---")
     for (bayar in caraPembayaran) {
         bayar.processPayment(75000.0)
+
+        when (bayar) {
+            is EWallet -> {
+                println("-> Membayar dengan E-Wallet, Nama Akun : ${bayar.accountName}")
+                bayar.topUp(50000.0)
+                bayar.processPayment(75000.0)
+            }
+
+            is CreditCard -> {
+                println("-> Membayar dengan CreditCard, Nama Akun : ${bayar.accountName}")
+                bayar.processPayment(75000.0)
+            }
+        }
     }
 }
