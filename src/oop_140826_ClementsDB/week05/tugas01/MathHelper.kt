@@ -1,6 +1,6 @@
 package oop_140826_ClementsDB.week05.tugas01
 
-class MathHelper (sisi: Int, panjang: Int, lebar: Int, jarijari: Double){
+class MathHelper (){
     fun hitungLuas(sisi: Int) : Int{
         return sisi * sisi
     }
