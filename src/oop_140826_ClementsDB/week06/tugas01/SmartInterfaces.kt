@@ -6,13 +6,14 @@ interface SmartDevice {
 }
 
 interface Switchable {
-    abstract fun turnOn(phone: SmartDevice)
+    fun turnOn(phone: SmartDevice)
 
-    abstract fun turnOff(phone: SmartDevice)
+    fun turnOff(phone: SmartDevice)
 }
 
 interface Recordable {
-    abstract fun startRecord()
+    fun startRecord()
 
-    fun stopRecord() { println("Perekaman dihentikan dan disimpan ke Cloud.")}
+    fun stopRecord() {
+        println("Perekaman dihentikan dan disimpan ke Cloud.")}
 }
