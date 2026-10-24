@@ -7,10 +7,23 @@ class SmartHomeHub () {
         devices.add(device)
     }
 
-    fun turnOffAllSwitches(turnOff: MutableList<SmartDevice>.(Any) -> Unit) {
+    fun turnOffAllSwitches() {
         for (device in devices) {
             if (device is Switchable) {
-                devices.turnOff(device)
+                device.turnOff(device)
+            }
+        }
+    }
+
+
+    fun activateSecurityMode() {
+        for (device in devices) {
+            if(device is Recordable) {
+                device.startRecord()
+            }
+
+            if (device is SmartSpeaker) {
+                device.playMusic("Sirine Peringatan")
             }
         }
     }
